@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from "react";
-import {View,Text,TouchableOpacity,FlatList,Image} from 'react-native';
+import {View,Text,TouchableOpacity,FlatList,Image,onPress,Alert} from 'react-native';
 import AppStyle from "../../components/AppStyle";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import AppColors from "../../components/AppColors";
 import axios from "axios";
 const ip = "172.20.10.3"
 const Store = (props)  => {
@@ -42,7 +44,16 @@ const Store = (props)  => {
 export const screensOptions = (navData) => {
 
     return {
-        headerTitle: 'Store'
+        headerTitle: 'Shop',
+        headerRight: () => (
+          <MaterialCommunityIcons 
+              onPress={() => {Alert.alert('Sorry cart is not created (')}}
+              name="cart"
+              color={AppColors.black}
+              size={28} 
+          />
+        )
+
     }
 }
 

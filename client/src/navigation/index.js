@@ -28,7 +28,7 @@ const StoreStackNavigator = createNativeStackNavigator();
 export const StoreStack = () => {
     return(
         <StoreStackNavigator.Navigator screenOptions={defaultNavOptions}>
-            <StoreStackNavigator.Screen name='Category' component={Store} options={StoreScreenOptions} />
+            <StoreStackNavigator.Screen name='Shop' component={Store} options={StoreScreenOptions} />
             <StoreStackNavigator.Screen name='SubCategory' component={SubCategory} options={SubCategoryScreenOptions}/>
             <StoreStackNavigator.Screen name='Product' component={Product} options={ProductScreenOptions}/>
             <StoreStackNavigator.Screen name='ProductDetails' component={ProductDetails} options={ProductDetailsScreenOptions}/>
